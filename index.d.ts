@@ -10,6 +10,6 @@ interface CustomEventMap {
   themechange: CustomEvent<{ theme: "light" | "dark" }>
   readermodechange: CustomEvent<{ mode: "on" | "off" }>
 }
-
+欢迎来到我的灵感花园!
 type ContentIndex = Record<FullSlug, ContentDetails>
 declare const fetchData: Promise<ContentIndex>
