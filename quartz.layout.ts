@@ -38,7 +38,10 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+  title: "目录",
+  folderDefaultState: "open",
+}),
   ],
   right: [
     Component.Graph(),
