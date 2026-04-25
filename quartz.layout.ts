@@ -25,25 +25,17 @@ export const defaultContentPageLayout: PageLayout = {
     Component.ContentMeta(),
     Component.TagList(),
   ],
-  right: [
+  left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
-      components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
-        { Component: Component.Darkmode() },
-        { Component: Component.ReaderMode() },
-      ],
-    }),
-    Component.Explorer({
-  title: "目录",
-  folderDefaultState: "open",
-}),
+    Component.Search(),
+    Component.Darkmode(),
   ],
   right: [
+    Component.Explorer({
+      title: "目录",
+      folderDefaultState: "open",
+    }),
     Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
